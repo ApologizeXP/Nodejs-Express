@@ -2,15 +2,28 @@ const express = require("express");
 const chalk = require("chalk");
 const debug = require("debug");
 const morgan = require("morgan");
+const path = require("path");
+const productsRouter = require("./src/router/productsRouter")
+
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT;
 
 app.use(morgan("combined"));
+app.use(express.static(path.join(__dirname, "/public/")));
+
+app.set("views", "./src/views");
+app.set("view engine", "ejs");
+
+
+app.use("/products", productsRouter);
 
 app.get("/", (req, res) => {
-  res.send("Hello Pond!");
+  res.render("index", {
+    username: "Kittikarn",
+    customer: ["PangPond", "Kittikarn", "Janbang"],
+  });
 });
 
-app.listen(port,() => {
-    debug(`Listening on port ${chalk.red(port)}`);
+app.listen(PORT, () => {
+  debug("Listening on port" + chalk.red(PORT));
 });

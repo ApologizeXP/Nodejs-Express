@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "producttitle": "เสื้อ1",
+    "productdescription": "นิ่ม",
+    "productprice": 40
+  },
+  {
+    "id": 1,
+    "producttitle": "เสื้อ2",
+    "productdescription": "นิ่มมาก",
+    "productprice": 45
+  },
+  {
+    "id": 2,
+    "producttitle": "เสื้อ3",
+    "productdescription": "แข็ง",
+    "productprice": 50
+  },
+  {
+    "id": 3,
+    "producttitle": "เสื้อ4",
+    "productdescription": "แข็งมาก",
+    "productprice": 55
+  },
+  {
+    "id": 4,
+    "producttitle": "เสื้อ5",
+    "productdescription": "แข็งมากๆ",
+    "productprice": 155
+  }
+]
